@@ -12,6 +12,5 @@ def client():
     ctx.pop()
 
 def test_say_hi(client):
-    """we are testing to see if the /roll weblink does the right thing"""
     response = client.get('/say')
-    assert response.status_code == 200
+    assert response.status_code == 200 

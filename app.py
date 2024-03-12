@@ -1,12 +1,15 @@
-from flask import Flask
-from route import fight
-import random
+from flask import Flask, request, redirect
+from demigods import Demigods
+from route import ancient
 
 app = Flask(__name__)
 
-@fight.route('/say', methods = ['GET'])
-def say_hi():
-    return 'hello world'
+@ancient.route('/reset')
+def reset():
+    demigods.clear()
+    return 'the list has been reset'
+
+@ancient.route('/question/1', methods = ['GET', 'POST'])
 
 
 

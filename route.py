@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 
-fight = Blueprint('fight', __name__)
+ancient = Blueprint('ancient', __name__)
 
-@fight.route('/say', methods = ['GET'])
-def say_hi():
-    return 'hello world'
+@ancient.route('/welcome_image', methods = ['GET'])
+def serve_image():
+    return render_template('image.html')
