@@ -11,6 +11,6 @@ def client():
     yield client
     ctx.pop()
 
-def test_say_hi(client):
-    response = client.get('/say')
+def test_question_1(client):
+    response = client.get('/question/1')
     assert response.status_code == 200 
