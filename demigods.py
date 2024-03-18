@@ -7,7 +7,7 @@ class Demigods:
             'grover': grover
         }
 
-    def add(self,leaders:str) -> None:
+    def add(self,leaders: str) -> None:
         if leaders == 'percy':
             self.leaders['percy'] = self.leaders.get('percy') + 1
         if leaders == 'annabeth':
@@ -21,6 +21,7 @@ class Demigods:
         for leaders, points in self.leaders.items():
             if points > score:
                 result = leaders
+                
         return result
     
     def clear(self) -> None:
