@@ -84,6 +84,24 @@ def fourth_question():
         if selected == answers[2]:
             categories.add('grover')
 
+        return redirect('/question/5')
+    
+@ancient.route('/question/5', methods = ['GET', 'POST'])
+def fifth_question():
+    answers = ['a medium length xiphos','a dagger','reed pipes']
+
+    if request.method == 'GET':
+        return render_template('question_5.html', answers = answers)
+    
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            categories.add('percy')
+        if selected == answers[1]:
+            categories.add('annabeth')
+        if selected == answers[2]:
+            categories.add('grover')
+
         return redirect('/results')
 
 @ancient.route('/results')

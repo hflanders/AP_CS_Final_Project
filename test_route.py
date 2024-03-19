@@ -30,3 +30,11 @@ def test_question_3(client):
 def test_question_4(client):
     response = client.get('/question/4')
     assert response.status_code == 200
+
+def test_question_5(client):
+    response = client.get('/question/5')
+    assert response.status_code == 200 
+
+def test_results(client):
+    response = client.get('/results')
+    assert response.status_code == 200

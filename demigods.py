@@ -21,6 +21,7 @@ class Demigods:
         for leaders, points in self.leaders.items():
             if points > score:
                 result = leaders
+                score = points
                 
         return result
     

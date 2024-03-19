@@ -1,2 +1,2 @@
 # AP_CS_Final_Project
-In this project students will create a web application
+This is an AP computer science submission where the student  created a web questionair.
