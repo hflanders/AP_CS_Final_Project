@@ -1,3 +1,5 @@
+import random
+
 class Demigods:
 
     def __init__(self, percy: int, annabeth: int, grover: int):
@@ -18,12 +20,18 @@ class Demigods:
     def select(self) -> str:
         score = 0
         result = ''
-        for leaders, points in self.leaders.items():
+        ties = []
+        for leader, points in self.leaders.items():
             if points > score:
-                result = leaders
+                result = leader
                 score = points
-                
-        return result
+            elif points == score:
+                ties.append(leader)
+
+        if len(ties) == 0:
+            return result
+        
+        return ties[random.randint(0,len(ties)-1)]
     
     def clear(self) -> None:
         self.leaders = {
