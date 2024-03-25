@@ -88,7 +88,7 @@ def fourth_question():
     
 @ancient.route('/question/5', methods = ['GET', 'POST'])
 def fifth_question():
-    answers = ['a medium length xiphos','a dagger','reed pipes']
+    answers = ['a medium length sword','a dagger','reed pipes']
 
     if request.method == 'GET':
         return render_template('question_5.html', answers = answers)
