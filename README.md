@@ -7,6 +7,12 @@ In this questionnaire we created html files that creates a class and a url for e
 
  what the question is in the questionnaire
 
+ how to start the app
+
+ how to reset it
+
+ how to end it
+
 Mention the technologies used with link to place
 Flask:
 https://flask.palletsprojects.com/en/1.1.x/testing/
