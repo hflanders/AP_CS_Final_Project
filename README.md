@@ -1,19 +1,13 @@
 # AP_CS_Final_Project
 This is an AP computer science submission where the student created a web questionnaire.
 
-in-depth description: talk about how the questionnaire works using html flask user selects the answer and then you get the result talk about how the selection works and how it is a very simple selection thing that doesn't have a good way to solve ties
+In this questionnaire we created html files that creates a class and a url for each individual html file, so each question is it's own url. The flask user will select the answer they feel best fits the question, then whatever the leader the answer coincides with will gain a point. 
 
-In this questionnaire we created html files that creates a class and a url for each individual html file, so each question is it's own url. The flask user will select the answer they feel best fits the question, then whatever the leader the answer coincides with will gain a point. The url will then direct the computer to the next question's url. After answering all the questions, whatever leader has the most points will then be printed as the "character that best fits you". If there is a tie then the code will randomly pick one of the characters from the two characters tied in the leader list. After getting your character you can type in the url: http://localhost:8081/reset, to reset the quiz to take again. There is a seperate url: http://localhost:8081/welcome, which directs  the viewer to a picture depicting the possible characters they can fit. 
+To start the questionnaire the user first must start the app.py file. Once the app.py file starts in the terminal you will be notified "Running on http://localhost:8081". The user will then type in the url: http://localhost:8081/welcome, to then get directed to the welcome image depicting the possible characters you can be classiffied to be. Then the user can type the url: http://localhost:8081/reset, to check that the quiz options are clear. Next the user will type the url: http://localhost:8081/question/1, to start the actual questionnaire, the first question "Where do you feel most at home?" will now show up and will provide the user with a drop down with three options, the user picks the one they feel best applies to themselves, then click go. In clicking go the computer will them be directed to the second question's url. The second question will ask: "What do you value most in life?", to answer you click on the drag down and pick which of the three choices best fit, then you click go and will be sent to the third question. The third question will ask: "What is your fatal flaw?", you click the drag down and pick one of the three choices, then click go and will be sent to the fourth question. The fourth question asks: "What are you most afraid of?", you will click which of the three best apply to you, then click go and will be sent to the fifth and final question. This question will ask: "What is your weapon of choice?", you answer by clicking the drag down and picking which of the three choices best apply to you, then click go and you will be redirected to the url: http://localhost:8081/results. Here you will be told "the character you best fit".
 
- what the question is in the questionnaire
+When you select one of the answers to each question a point will be added to the corresponding character it applies to in the leaders list. At the end of the quiz the leader with the greatest number of points will be returned as "the character you best fit". If there is a tie in the list of the leaders then the code will randomly pick one of the characters from the tie to be returned as "the character you best fit". After recieving your results you can reset the quiz to take again by typing the reset url:  http://localhost:8081/reset. After resetting the quiz, if you want to take it again you can type: http://localhost:8081/question/1, however, you no longer want to take the quiz you can end it. To end the quiz you can open up the terminal and press CTRL+C to quit the process.
 
- how to start the app
-
- how to reset it
-
- how to end it
-
-Mention the technologies used with link to place
+Sources:
 Flask:
 https://flask.palletsprojects.com/en/1.1.x/testing/
 https://flask.palletsprojects.com/en/3.0.x/
