@@ -16,7 +16,7 @@ def reset():
 
 @ancient.route('/question/1', methods = ['GET', 'POST'])
 def first_question():
-    answers = ['on a beach','in a library','in a forest']
+    answers = ['on a beach','in a library','in a forest', 'in your room', 'as a tree']
 
     if request.method == 'GET':
         return render_template('question_1.html', answers = answers)
@@ -29,12 +29,14 @@ def first_question():
             categories.add('annabeth')
         if selected == answers[2]:
             categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
 
         return redirect('/question/2')
     
 @ancient.route('/question/2', methods = ['GET', 'POST'])
 def second_question():
-    answers = ['friends and family','knowledge','nature and animals']
+    answers = ['friends and family','knowledge','nature and animals', 'being recognized']
 
     if request.method == 'GET':
         return render_template('question_2.html', answers = answers)
@@ -47,12 +49,14 @@ def second_question():
             categories.add('annabeth')
         if selected == answers[2]:
             categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
 
         return redirect('/question/3')
 
 @ancient.route('/question/3', methods = ['GET', 'POST'])
 def third_question():
-    answers = ['personal loyalty','hubris','low self-esteem']
+    answers = ['personal loyalty','hubris','low self-esteem', 'holding grudges']
 
     if request.method == 'GET':
         return render_template('question_3.html', answers = answers)
@@ -65,12 +69,14 @@ def third_question():
             categories.add('annabeth')
         if selected == answers[2]:
             categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
 
         return redirect('/question/4')
 
 @ancient.route('/question/4', methods = ['GET', 'POST'])
 def fourth_question():
-    answers = ['drowning','spiders','small dark places']
+    answers = ['drowning','spiders','small dark places', 'being outed']
 
     if request.method == 'GET':
         return render_template('question_4.html', answers = answers)
@@ -83,12 +89,14 @@ def fourth_question():
             categories.add('annabeth')
         if selected == answers[2]:
             categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
 
         return redirect('/question/5')
     
 @ancient.route('/question/5', methods = ['GET', 'POST'])
 def fifth_question():
-    answers = ['a medium length sword','a dagger','reed pipes']
+    answers = ['a medium length sword','a dagger','reed pipes', 'a long sword']
 
     if request.method == 'GET':
         return render_template('question_5.html', answers = answers)
@@ -101,6 +109,8 @@ def fifth_question():
             categories.add('annabeth')
         if selected == answers[2]:
             categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
 
         return redirect('/results')
 
