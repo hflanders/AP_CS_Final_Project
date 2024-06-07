@@ -44,5 +44,6 @@ class Demigods:
             'Percy Jackson': 0,
             'Annabeth Chase': 0,
             'Grover Underwood': 0,
-            'Nico Di Angelo': 0
+            'Nico Di Angelo': 0,
+            'Thalia Grace': 0
         }

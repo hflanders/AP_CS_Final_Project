@@ -3,7 +3,7 @@ from demigods import Demigods
 
 ancient = Blueprint('ancient', __name__)
 
-categories = Demigods(0,0,0)
+categories = Demigods(0,0,0,0,0)
 
 @ancient.route('/welcome', methods = ['GET'])
 def serve_image():
@@ -31,12 +31,14 @@ def first_question():
             categories.add('grover')
         if selected == answers[3]:
             categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
 
         return redirect('/question/2')
     
 @ancient.route('/question/2', methods = ['GET', 'POST'])
 def second_question():
-    answers = ['friends and family','knowledge','nature and animals', 'being recognized']
+    answers = ['friends and family','knowledge','nature and animals', 'being recognized', 'freedom']
 
     if request.method == 'GET':
         return render_template('question_2.html', answers = answers)
@@ -51,12 +53,14 @@ def second_question():
             categories.add('grover')
         if selected == answers[3]:
             categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
 
         return redirect('/question/3')
 
 @ancient.route('/question/3', methods = ['GET', 'POST'])
 def third_question():
-    answers = ['personal loyalty','hubris','low self-esteem', 'holding grudges']
+    answers = ['personal loyalty','hubris','low self-esteem', 'holding grudges', 'ambition']
 
     if request.method == 'GET':
         return render_template('question_3.html', answers = answers)
@@ -71,12 +75,14 @@ def third_question():
             categories.add('grover')
         if selected == answers[3]:
             categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
 
         return redirect('/question/4')
 
 @ancient.route('/question/4', methods = ['GET', 'POST'])
 def fourth_question():
-    answers = ['drowning','spiders','small dark places', 'being outed']
+    answers = ['drowning','spiders','small dark places', 'being outed', 'heights']
 
     if request.method == 'GET':
         return render_template('question_4.html', answers = answers)
@@ -91,12 +97,14 @@ def fourth_question():
             categories.add('grover')
         if selected == answers[3]:
             categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
 
         return redirect('/question/5')
     
 @ancient.route('/question/5', methods = ['GET', 'POST'])
 def fifth_question():
-    answers = ['a medium length sword','a dagger','reed pipes', 'a long sword']
+    answers = ['a medium length sword','a dagger','reed pipes', 'a long sword','a bow and arrows']
 
     if request.method == 'GET':
         return render_template('question_5.html', answers = answers)
@@ -111,6 +119,8 @@ def fifth_question():
             categories.add('grover')
         if selected == answers[3]:
             categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
 
         return redirect('/results')
 
