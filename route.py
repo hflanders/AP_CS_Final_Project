@@ -122,6 +122,138 @@ def fifth_question():
         if selected == answers[4]:
             categories.add('thalia')
 
+        return redirect('/question/6')
+    
+@ancient.route('/question/6', methods = ['GET', 'POST'])
+def sixth_question():
+    answers = ['loyal','ambitious','trustworthy', 'curious','confident']
+
+    if request.method == 'GET':
+        return render_template('question_6.html', answers = answers)
+    
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            categories.add('percy')
+        if selected == answers[1]:
+            categories.add('annabeth')
+        if selected == answers[2]:
+            categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
+
+        return redirect('/question/7')
+    
+@ancient.route('/question/7', methods = ['GET', 'POST'])
+def seventh_question():
+    answers = ['In a New York Apartment','In a lake cabin','In a cabin in the forest', 'In a Hotel','In a tree']
+
+    if request.method == 'GET':
+        return render_template('question_7.html', answers = answers)
+    
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            categories.add('percy')
+        if selected == answers[1]:
+            categories.add('annabeth')
+        if selected == answers[2]:
+            categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
+
+        return redirect('/question/8')
+
+@ancient.route('/question/8', methods = ['GET', 'POST'])
+def eighth_question():
+    answers = ['power over the water','super smarts and photographic memory','power over nature', 'the power of necromancy','power over lightning']
+
+    if request.method == 'GET':
+        return render_template('question_8.html', answers = answers)
+    
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            categories.add('percy')
+        if selected == answers[1]:
+            categories.add('annabeth')
+        if selected == answers[2]:
+            categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
+
+        return redirect('/question/9')
+    
+@ancient.route('/question/9', methods = ['GET', 'POST'])
+def ninth_question():
+    answers = ['Posiedon','Athena','Pan', 'Hades','Zeus']
+
+    if request.method == 'GET':
+        return render_template('question_9.html', answers = answers)
+    
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            categories.add('percy')
+        if selected == answers[1]:
+            categories.add('annabeth')
+        if selected == answers[2]:
+            categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
+
+        return redirect('/question/10')
+
+@ancient.route('/question/10', methods = ['GET', 'POST'])
+def tenth_question():
+    answers = ['Hestia','Athena','Pan', 'Zeus','Artemis']
+
+    if request.method == 'GET':
+        return render_template('question_10.html', answers = answers)
+    
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            categories.add('percy')
+        if selected == answers[1]:
+            categories.add('annabeth')
+        if selected == answers[2]:
+            categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
+
+        return redirect('/question/11')
+    
+@ancient.route('/question/11', methods = ['GET', 'POST'])
+def eleventh_question():
+    answers = ['Hestia','Athena','Pan', 'Zeus','Artemis']
+
+    if request.method == 'GET':
+        return render_template('question_11.html', answers = answers)
+    
+    if request.method == 'POST':
+        selected = request.form['selected']
+        if selected == answers[0]:
+            categories.add('percy')
+        if selected == answers[1]:
+            categories.add('annabeth')
+        if selected == answers[2]:
+            categories.add('grover')
+        if selected == answers[3]:
+            categories.add('nico')
+        if selected == answers[4]:
+            categories.add('thalia')
+
         return redirect('/results')
 
 @ancient.route('/results')
