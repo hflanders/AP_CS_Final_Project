@@ -1,7 +1,7 @@
 <form class="form-inline" method="POST" action="{{ url_for('ancient.eighth_question') }}">
     <div class="form-group">
       <div class="input-group">
-          <span class="input-group-addon">What powers would you rather have?</span>
+          <span class="input-group-addon">What would you rather have?</span>
               <select name="selected" class="selectpicker form-control">
                 {% for answer in answers %}
                 <option value="{{answer}}">{{answer}}</option>

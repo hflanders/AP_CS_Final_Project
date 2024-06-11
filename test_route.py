@@ -35,6 +35,30 @@ def test_question_5(client):
     response = client.get('/question/5')
     assert response.status_code == 200 
 
+def test_question_6(client):
+    response = client.get('/question/6')
+    assert response.status_code == 200 
+
+def test_question_7(client):
+    response = client.get('/question/7')
+    assert response.status_code == 200 
+
+def test_question_8(client):
+    response = client.get('/question/8')
+    assert response.status_code == 200 
+
+def test_question_9(client):
+    response = client.get('/question/9')
+    assert response.status_code == 200 
+
+def test_question_10(client):
+    response = client.get('/question/10')
+    assert response.status_code == 200 
+
+def test_question_11(client):
+    response = client.get('/question/11')
+    assert response.status_code == 200 
+
 def test_results(client):
     response = client.get('/results')
     assert response.status_code == 200
