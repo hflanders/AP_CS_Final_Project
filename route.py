@@ -67,6 +67,7 @@ def second_question():
         if selected == answers[4]:
             categories.add('thalia')
 
+        # will send the web browser to the next question upon pressing go on the site
         return redirect('/question/3')
 
 @ancient.route('/question/3', methods = ['GET', 'POST'])
@@ -265,8 +266,10 @@ def eleventh_question():
         if selected == answers[4]:
             categories.add('thalia')
 
+        # sends the user to the web browser that provides the character with the most points
         return redirect('/results')
 
 @ancient.route('/results')
+# creates a new web browser that will provide the character with the most points
 def get_results():
     return 'the character you best fit is ' + categories.select()
