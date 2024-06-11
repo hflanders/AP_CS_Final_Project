@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, redirect
 from demigods import Demigods
 
 ancient = Blueprint('ancient', __name__)
+# we are creating a blueprint and laying out the foundations for our web browser
 
 categories = Demigods(0,0,0,0,0)
 

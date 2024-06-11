@@ -4,6 +4,7 @@ class Demigods:
     """Creates a class for all the characters involved in this quiz"""
 
     def __init__(self, percy : int, annabeth: int, grover: int, nico: int, thalia: int):
+        # establishes who each character is in our list and connecting them to their full name 
         self.leaders = {
             'Percy Jackson': percy,
             'Annabeth Chase': annabeth,
@@ -30,10 +31,12 @@ class Demigods:
         score = 0
         result = ''
         ties = []
+        # checking for the highest numbers in our list
         for leader, points in self.leaders.items():
             if points > score:
                 result = leader
                 score = points
+        # if there is a tie add the characters to another list
             elif points == score:
                 ties.append(leader)
 
@@ -58,6 +61,7 @@ class Demigods:
         if count == 1:
             return max_leader
         
+        # pick a random character from our list of tied characters
         return ties[random.randint(0,len(ties)-1)]
     
     def clear(self) -> None:
